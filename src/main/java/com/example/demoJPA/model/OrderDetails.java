@@ -10,6 +10,8 @@ public class OrderDetails {
     @GeneratedValue
     Integer id;
 
+    Integer order_id;
+
     String product_code;
 
     Integer quantity;
