@@ -4,24 +4,24 @@ import com.example.demoJPA.model.Customers;
 import com.example.demoJPA.model.Orders;
 import com.example.demoJPA.service.CustomersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class CustomersController {
     @Autowired
     CustomersService customersService;
 
-    @GetMapping(value = "/orders/{id}")
+    @GetMapping("/orders/{id}")
     public List<Orders> GetOrdersByCustomer(@PathVariable Integer id){
         return customersService.getCustomerOrders(id);
     }
 
-    @PostMapping(value = "/insertCustomer")
+    @PostMapping("/insertCustomer")
     public void InsertCustomer(){
         Customers c = new Customers();
         c.setUsername("MihailB14");

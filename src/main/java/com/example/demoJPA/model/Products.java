@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @NoArgsConstructor
@@ -13,7 +14,8 @@ import lombok.Setter;
 @Setter
 public class Products {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     String code;
 
     String name;
