@@ -19,7 +19,7 @@ public class CustomersService {
     @Autowired
     OrdersRepository ordersRepository;
 
-    public void CreateCustomer(Customers c){
+    public void createCustomer(Customers c){
         customersRepository.save(c);
     }
 

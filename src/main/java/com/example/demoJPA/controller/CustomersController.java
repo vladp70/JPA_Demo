@@ -39,6 +39,6 @@ public class CustomersController {
         c.setCity("Bucuresti");
         c.setPostalCode("123456");
         c.setCountry("Romania");
-        customersService.CreateCustomer(c);
+        customersService.createCustomer(c);
     }
 }
