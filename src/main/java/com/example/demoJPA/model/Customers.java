@@ -3,7 +3,6 @@ package com.example.demoJPA.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,9 +19,9 @@ public class Customers {
 
     String username;
 
-    String last_name;
+    String lastName;
 
-    String first_name;
+    String firstName;
 
     String phone;
 
